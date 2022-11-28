@@ -156,6 +156,7 @@ public class FighterTest {
                 // focus for i times
                 fighter.focus();
             }
+            System.out.println (i + "  " + fighter.getFocusStacks()); 
             assertEquals(i, fighter.getFocusStacks());
             fighter.attack(combatant);
             int expectedDamage = fighter.getAttackPower() * (int)Math.pow(2, i);
