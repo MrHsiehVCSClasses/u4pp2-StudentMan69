@@ -83,7 +83,7 @@ public class Combatant {
     }
 
     public String toString(){
-        return ("Your name is: " + name + "   " + "Your attack is: " + attack + "   " + "Your health is: " + health + "Your max Health is: " + maxHealth);
+        return ("Name: " + name + "   " + "Attack: " + attack + "   " + "Health: " + health + " Max Health: " + maxHealth);
     }
 
 

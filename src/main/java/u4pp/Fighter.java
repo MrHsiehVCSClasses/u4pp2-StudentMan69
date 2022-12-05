@@ -37,9 +37,11 @@ public class Fighter extends Combatant {
     // Other methods
 
     public void attack(Combatant target) {
-        int totalDamage = this.attack * (int) Math.pow(2, stacks);
-        target.takeDamage(totalDamage);
-        stacks = 0;
+        if (canFight()) {
+            int totalDamage = this.attack * (int) Math.pow(2, stacks);
+            target.takeDamage(totalDamage);
+            stacks = 0;
+        }
 
     }
 
@@ -79,8 +81,8 @@ public class Fighter extends Combatant {
 
     public String toString() {
         String oldString = super.toString();
-        return (oldString + "Your Fighter Level is: " + level + "   " + "Your experience is: " + xp + "   "
-                + "Your number of focus stacks are: " + stacks + "   " + "Blocking Status: " + isBlocking);
+        return (oldString + " Level: " + level + "   " + " EXP: " + xp + "   "
+                + " Focus Stack: " + stacks + "   " + "Blocking Status: " + isBlocking);
     }
 }
 
