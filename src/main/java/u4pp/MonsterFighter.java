@@ -15,7 +15,9 @@ public class MonsterFighter {
         Monster monster = new Monster("Lizard", 20, 2, 1);
         DefenseMonster defenseMonster = new DefenseMonster("Slime", 20, 2, 1, 6);
         RandomMonster randomMonster = new RandomMonster("NPC", 2, 15, 5);
-        Monster[] monsters = { monster, defenseMonster, randomMonster };
+        Monster bigLizard = new Monster("Big Lizard", 25, 4, 5);
+        DefenseMonster eliteBarbarian = new DefenseMonster ("Elite Barbarian", 50, 1, 10, 10);
+        Monster[] monsters = { monster, defenseMonster, randomMonster, bigLizard, eliteBarbarian};
         System.out.println(monster);
         System.out.println(fighter);
         while (fighter.getHealth() > 0) {
